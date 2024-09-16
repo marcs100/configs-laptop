@@ -1,0 +1,13 @@
+theme = "sonokai_maia"
+
+[editor]
+bufferline = "multiple"
+
+[editor.indent-guides]
+render = true
+character = "╎" # Some characters that work well: "▏", "┆", "┊", "⸽"
+skip-levels = 1
+
+[keys.normal]
+C-right = ":bn" #move to next buffer
+C-left = ":bp"  #move to previous buffer
