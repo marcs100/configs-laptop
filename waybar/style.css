@@ -1,6 +1,7 @@
 * {
 min-height: 0;
-font-family: Lexend, "Font Awesome 6 Free Solid";
+/*font-family: Lexend, "Font Awesome 6 Free Solid";*/
+font-family: Lexend, "Monospace";
 font-size: 12px;
 font-weight: 400;
 }

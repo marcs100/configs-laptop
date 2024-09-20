@@ -18,7 +18,7 @@ set $menu rofi -show drun
 set $term alacritty
 set $browser flatpak run io.github.zen_browser.zen
 set $files cosmic-files
-set $bluetooth rofi-bluetooth
+set $bluetooth blueman-manager
 set $power_menu nwg-bar
 
 ### Output configuration
@@ -44,7 +44,7 @@ output * bg /home/marc/Sync/wallpapers/vault.jpg fill
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to oleeper=flatpak run io.github.zen_browser.zen 
+# resumed. It will also lock your screen before your computer goes to sleep 
 
 
 # Input configuration
@@ -66,11 +66,14 @@ output * bg /home/marc/Sync/wallpapers/vault.jpg fill
 exec alacritty --class terminal_scratchpad
 for_window [app_id="terminal_scratchpad"] move scratchpad, resize set 1400 800
 
-#network
+#network applet
 exec nm-applet --indicator
 
+#bluetooth applet
+exec blueman-applet
+
 gaps inner 4
-#gaps outer 3
+gaps outer 3
 
  input "type:keyboard" {
   xkb_layout "gb"
@@ -148,11 +151,11 @@ exec swaync
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
-    #these need work!!!!!!!
-    bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-    bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
-    bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
-    bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
+    #Set volume and mic - screen brightness not working yet!
+    bindsym XF86AudioRaiseVolume exec wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+
+    bindsym XF86AudioLowerVolume exec wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%- 
+    bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_SINK@ toggle
+    bindsym XF86AudioMicMute exec wpctl set-mute @DEFAULT_SOURCE@ toggle
     #bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
     #bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
 #
