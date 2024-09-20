@@ -14,7 +14,7 @@ window#waybar {
 }
 
 window#waybar.hidden {
-    opacity: 0.5;
+    opacity: 0.4;
 }
 
 
@@ -77,43 +77,25 @@ padding: 0px;
 color: #585b70;
 }
 
-#custom-spotify.playing {
-color: #cdd6f4;
-}
-
-#custom-spotify.liked {
-color: #f9e2af;
-}
-#custom-spotify.added {
-color: #cba6f7;
-}
-
-#custom-spotify.removed {
-color: #f38ba8;
-}
-
-#custom-spotify.paused {
-color: #9399b2;
-}
 
 window#waybar.empty #window {
     background-color: transparent;
 }
 
 #cpu {
-color: #94e2d5;
+color: #ebebeb;
 }
 
 #memory {
-color: #cba6f7;
+color: #ebebeb;
 }
 
 #clock {
-color: #74c7ec;
+color: #ebebeb;
 }
 
 #clock.simpleclock {
-color: #89b4fa;
+color: #ebebeb;
 }
 
 #window {
@@ -121,7 +103,7 @@ color: #a6e3a1;
 }
 
 #pulseaudio {
-color: #b4befe;
+color: #ebebeb;
 }
 
 #pulseaudio.muted {
@@ -139,7 +121,7 @@ font-size: 14px;
 }
 
 #battery {
-    color: #94e2d5;
+    color: #ebebeb;
     padding-left: 5px;
 }
 
