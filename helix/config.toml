@@ -1,4 +1,4 @@
-theme = "sonokai_maia"
+theme = "adwaita-dark"
 
 [editor]
 bufferline = "multiple"

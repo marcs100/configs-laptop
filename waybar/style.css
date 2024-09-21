@@ -20,7 +20,7 @@ window#waybar.hidden {
 
 
 #workspaces.active{
-    background-color: #f31717
+    background-color: #31575a
 }
 
 #workspaces button {
@@ -44,7 +44,7 @@ background-color: #cdd6f4;
 
 #workspaces button.active {
 color: #1e1e2e;
-background-color: #89b4fa;
+background-color: #31575a
 }
 
 #workspaces button.urgent {
@@ -53,7 +53,7 @@ background-color: #f38ba8;
 
 
 #workspaces button.current_output.visible{
-background-color: #6b8ed8;
+background-color: #31575a;
 }
 
 #battery,
