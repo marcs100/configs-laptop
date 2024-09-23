@@ -72,6 +72,8 @@ exec nm-applet --indicator
 #bluetooth applet
 exec blueman-applet
 
+exec syncthing --no-browser
+
 gaps inner 4
 gaps outer 3
 
@@ -82,9 +84,10 @@ gaps outer 3
 
 #set window colours
 #               border  bground  text    indicator  child border
-client.focused  #434039  #434040 #d9d6ce #717d8a    #55c2de
+#client.focused  #434039  #434040 #d9d6ce #717d8a    #55c2de
+client.focused  #55c2de   #434040 #d9d6ce #717d8a    #55c2de
 
-default_border normal 3
+default_border normal 2
 
 exec swaync
 
