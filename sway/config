@@ -85,9 +85,9 @@ gaps outer 3
 #set window colours
 #               border  bground  text    indicator  child border
 #client.focused  #434039  #434040 #d9d6ce #717d8a    #55c2de
-client.focused  #55c2de   #434040 #d9d6ce #717d8a    #55c2de
+client.focused  #434040   #434039 #d9d6ce #717d8a    #434039
 
-default_border normal 2
+default_border normal 4
 
 exec swaync
 
